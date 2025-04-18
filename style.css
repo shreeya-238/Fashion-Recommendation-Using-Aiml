@@ -1,0 +1,453 @@
+:root {
+    --primary-color: #8B7355;
+    --secondary-color: #DEB887;
+    --text-color: #4A4A4A;
+    --bg-color: #F5F5DC;
+    --accent-color: #D2B48C;
+  }
+  
+  body {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+  }
+
+  /* navabr section */
+  
+  .navbar {
+    background-color: var(--primary-color) !important;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-brand, .nav-link {
+    color: var(--bg-color) !important;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--secondary-color) !important;
+  }
+
+  /* hero section */
+  
+  .hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .page-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 4rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-custom {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-custom:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    color: white;
+  }
+  
+  .section {
+    padding: 5rem 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--primary-color);
+  }
+
+  /* footer section */
+  footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 0;
+  }
+  
+  .social-icons a {
+    color: white;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: var(--secondary-color);
+  }
+  /* About Page Styles */
+.about-section {
+    background-color: white;
+  }
+  
+  .about-image {
+    position: relative;
+    padding: 2rem;
+  }
+  
+  .about-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--accent-color);
+    transform: translate(15px, 15px);
+    z-index: -1;
+  }
+  
+  .about-content {
+    padding: 2rem;
+  }
+  
+  .value-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .value-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .team-section {
+    background-color: var(--bg-color);
+    padding: 50px 0;
+  }
+  
+  .team-section .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  
+  .team-card {
+    flex: 1;
+    max-width: 85%; /* Ensures three cards per row */
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    
+  }
+  
+  .team-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  
+  .team-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  
+  /* Contact Page Styles */
+  .contact-section {
+    background-color: white;
+  }
+  
+  .contact-info {
+    padding: 2rem;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .info-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-right: 1.5rem;
+  }
+  
+  .contact-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-control {
+    border: 2px solid var(--accent-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  
+  .map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+/* Animations */
+[data-aos] {
+    opacity: 0;
+    transition-duration: 1s;
+    transition-property: opacity, transform;
+  }
+  
+  [data-aos].aos-animate {
+    opacity: 1;
+  }
+    /* carousel  */
+    .fashion-swiper {
+        width: 100%;
+        height: 700px; /* Adjust height */
+    }
+    
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .swiper-slide img {
+        width: 100%;
+        height: 500px; /* Adjust as needed */
+        object-fit: cover;
+        border-radius: 10px; /* Smooth edges */
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    
+    .swiper-slide-active img {
+        opacity: 1;
+    }
+    
+    .swiper-slide h3,
+    .swiper-slide p {
+        margin-top: 10px;
+    }
+
+
+
+    .search-input, .search-btn {
+      height: 50px; 
+      margin-left: 160px;/* Ensuring same height */
+    }
+    
+    .search-input {
+      flex-grow: 1;
+      max-width: calc(100% - 100px); /* Adjusting input width */
+    }
+    
+    .d-flex {
+      width: 80%;
+    }
+    .search-btn {
+      margin-bottom: 15px;
+      background-color: var(--primary-color);
+    }
+    .search-btn:hover {
+      color: #000;
+    }
+    
+    
+/* 🌟 Boutique Card Centered */
+.boutique-card {
+  width: 90%;
+  max-width: 1200px; /* Keeps it compact */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  margin: 0 auto; /* Ensures perfect centering */
+}
+
+/* Ensure Image and Content Align Well */
+.boutique-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.rating {
+  font-size: 18px;
+  color: #FFD700;
+  margin-bottom: 6px;
+}
+
+.rating-text {
+  font-size: 14px;
+  color: #555;
+}
+
+.address {
+  font-weight: bold;
+  color: #444;
+}
+
+
+/* alert message */
+.custom-alert {
+  position: fixed;
+  top: 80px;
+  right: 25px;
+  z-index: 1111;
+}
+
+.a-contact {
+  color: var(--text-color);
+}
+
+
+/* profile page styles */
+/* Profile Page Styles */
+.profile-section {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.profile-avatar {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+}
+
+.profile-avatar-edit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.avatar-edit-btn {
+  width: 40px;
+  height: 40px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.avatar-edit-btn:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.1);
+}
+.profile-info {
+  padding: 2rem;
+}
+
+.info-group {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.info-group label {
+  display: block;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.info-value {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-value span {
+  font-size: 1.1rem;
+}
+
+.edit-btn {
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.profile-actions {
+  text-align: center;
+  margin-top: 2rem;
+}
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: var(--primary-color);
+}
